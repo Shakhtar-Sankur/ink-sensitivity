@@ -1,0 +1,6 @@
+__pycache__/
+*.npy
+*.zarr/
+inj/
+v2_*/
+.venv/

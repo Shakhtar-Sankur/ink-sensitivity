@@ -1,0 +1,8 @@
+# notebooks/stage0_baseline.ipynb, last cell. Kaggle, NVIDIA Tesla T4, 28 October 2026.
+=== SUMMARY (copy this) ===
+GPU: Tesla T4
+Tesla T4
+segment: PHerc0139 w045 at 9.362 um; checkpoints: seed42/step-075000, seed43/step-020000; both directions
+maps: ['w045_ck0.npy', 'w045_ck0_reverse.npy', 'w045_ck1.npy', 'w045_ck1_reverse.npy']
+inference seconds: {0: 459, 1: 352}
+orientation as is; r vs published 2.4 um map = 0.368; shifted null = 0.068

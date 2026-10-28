@@ -1,0 +1,8 @@
+numpy<=2.2
+zarr==2.18.7
+numcodecs==0.15.1
+fsspec
+aiohttp
+requests
+pillow
+pytest
