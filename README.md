@@ -77,7 +77,7 @@ untouched), so only the bare control isolates the ink.
 On PHerc. 139 itself, the calibration holds: transplanted ink scores like the same real text left in place (median
 +0.109 against +0.101, mean of all four), and both forward checkpoints recover **69%** of that real text in place, while
 the depth-reversed runs recover **none** of it (0 of 48). Reading the volume in the reversed order is close to blind at
-9 µm on these segments, so averaging both directions, as the inference script's `--direction both` setting does,
+9 µm on these segments, so averaging the two directions (which `--direction both` writes as separate maps)
 dilutes the signal: on PHerc. 139 the four-way mean recovers only 19% of real text in place, against 69% forward.
 
 What this means for the First Letters search on PHerc. 800: ink like PHerc. 139's, placed on PHerc. 800's own papyrus
