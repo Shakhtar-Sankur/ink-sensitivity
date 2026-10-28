@@ -1,0 +1,42 @@
+== 0139: 8 letters, cap 267 px (354 s)
+== 0800-0: 4 letters, cap 289 px (229 s)
+== 0800-1: 4 letters, cap 289 px (183 s)
+== 0800-2: 4 letters, cap 289 px (142 s)
+== 0800-3: 8 letters, cap 289 px (136 s)
+== 0800-4: 4 letters, cap 289 px (149 s)
+== 0139: 8 letters, cap 267 px (208 s)
+== 0800-0: 4 letters, cap 289 px (124 s)
+== 0800-1: 4 letters, cap 289 px (120 s)
+== 0800-2: 4 letters, cap 289 px (122 s)
+== 0800-3: 8 letters, cap 289 px (136 s)
+== 0800-4: 4 letters, cap 289 px (127 s)
+== 0139: 8 letters, cap 267 px (208 s)
+== 0800-0: 4 letters, cap 289 px (124 s)
+== 0800-1: 4 letters, cap 289 px (118 s)
+== 0800-2: 4 letters, cap 289 px (120 s)
+== 0800-3: 8 letters, cap 289 px (135 s)
+== 0800-4: 4 letters, cap 289 px (125 s)
+all inference: 47.7 min
+In [6]:
+18 of 18 volumes scored
+== PHerc. 139 (calibration): 3 volumes
+  ck0.npy                null 0.00   a=0.5: 1/6 (z +0.2)   a=1: 1/6 (z -0.4)   a=2: 2/6 (z +1.0)   a=4: 1/6 (z -0.1)
+  ck0_reverse.npy        null 0.00   a=0.5: 0/6 (z -0.0)   a=1: 1/6 (z +0.2)   a=2: 0/6 (z +0.1)   a=4: 1/6 (z +1.1)
+  ck1.npy                null 0.00   a=0.5: 2/6 (z +0.6)   a=1: 3/6 (z +0.3)   a=2: 1/6 (z +1.1)   a=4: 2/6 (z +1.2)
+  ck1_reverse.npy        null 0.00   a=0.5: 2/6 (z +0.8)   a=1: 3/6 (z +1.1)   a=2: 1/6 (z +1.2)   a=4: 1/6 (z +0.4)
+  mean of all            null 0.00   a=0.5: 1/6 (z +0.2)   a=1: 3/6 (z +1.1)   a=2: 4/6 (z +1.4)   a=4: 4/6 (z +1.9)
+== PHerc. 800 (eligible, unread): 15 volumes
+  ck0.npy                null 0.00   a=0.5: 4/18 (z +0.1)   a=1: 4/18 (z +0.5)   a=2: 8/18 (z +1.1)   a=4: 5/18 (z +0.6)
+  ck0_reverse.npy        null 0.00   a=0.5: 1/18 (z -0.4)   a=1: 5/18 (z +0.4)   a=2: 4/18 (z -0.2)   a=4: 4/18 (z +0.8)
+  ck1.npy                null 0.00   a=0.5: 2/18 (z +0.2)   a=1: 3/18 (z +0.6)   a=2: 3/18 (z +0.6)   a=4: 1/18 (z -0.1)
+  ck1_reverse.npy        null 0.00   a=0.5: 5/18 (z -0.1)   a=1: 6/18 (z +0.6)   a=2: 8/18 (z +1.3)   a=4: 14/18 (z +2.4)
+  mean of all            null 0.00   a=0.5: 5/18 (z +0.2)   a=1: 6/18 (z +0.8)   a=2: 7/18 (z +0.7)   a=4: 9/18 (z +1.2)
+In [7]:
+In [8]:
+sig = json.load(open(f"{W}/sig.json"))
+=== STAGE 1 SUMMARY (copy this) ===
+GPU: Tesla T4
+Tesla T4
+signature: peak 0.226 sd; ink px 212496
+agg_0139.json {"ck0.npy": {"false_positive_rate": 0.0, "0.5": {"recovered": 0.16666666666666666, "n": 6, "median_z": 0.17076185243850764}, "1.0": {"recovered": 0.16666666666666666, "n": 6, "median_z": -0.3554679629673119}, "2.0": {"recovered": 0.3333333333333333, "n": 6, "median_z": 0.9794243485858746}, "4.0": {"recovered": 0.16666666666666666, "n": 6, "median_z": -0.05331120115161702}}, "ck0_reverse.npy": {"false_positive_rate": 0.0, "0.5": {"recovered": 0.0, "n": 6, "median_z": -0.042660967811028044}, "1.0": {"recovered": 0.16666666666666666, "n": 6, "median_z": 0.1643990435269031}, "2.0": {"recovered": 0.0, "n": 6, "median_z": 0.09491270726089102}, "4.0": {"recovered": 0.16666666666666666, "n": 6, "median_z": 1.1107903773393177}}, "ck1.npy": {"false_positive_rate": 0.0, "0.5": {"recovered": 0.3333333333333333, "n": 6, "median_z": 0.5605153434340606}, "1.0": {"recovered": 0.5, "n": 6, "median_z": 0.2974272248619678}, "2.0": {"recovered": 0.16666666666666666, "n": 6, "median_z": 1.0948482723294097}, "4.0": {"recovered": 0.3333333333333333, "n": 6, "median_z": 1.1524996002563173}}, "ck1_reverse.npy": {"false_positive_rate": 0.0, "0.5": {"recovered": 0.3333333333333333, "n": 6, "median_z": 0.8395522310113868}, "1.0": {"recovered": 0.5, "n": 6, "median_z": 1.0748697728993852}, "2.0": {"recovered": 0.16666666666666666, "n": 6, "median_z": 1.2178323129853843}, "4.0": {"recovered": 0.16666666666666666, "n": 6, "median_z": 0.44780287690843357}}, "mean of all": {"false_positive_rate": 0.0, "0.5": {"recovered": 0.16666666666666666, "n": 6, "median_z": 0.19811617593203198}, "1.0": {"recovered": 0.5, "n": 6, "median_z": 1.1316538103006397}, "2.0": {"recovered": 0.6666666666666666, "n": 6, "median_z": 1.3717580159247225}, "4.0": {"recovered": 0.6666666666666666, "n": 6, "median_z": 1.9298577303344362}}}
+agg_0800.json {"ck0.npy": {"false_positive_rate": 0.0, "0.5": {"recovered": 0.2222222222222222, "n": 18, "median_z": 0.12367274638154474}, "1.0": {"recovered": 0.2222222222222222, "n": 18, "median_z": 0.5376410756333491}, "2.0": {"recovered": 0.4444444444444444, "n": 18, "median_z": 1.1349649247160112}, "4.0": {"recovered": 0.2777777777777778, "n": 18, "median_z": 0.606341547064875}}, "ck0_reverse.npy": {"false_positive_rate": 0.0, "0.5": {"recovered": 0.05555555555555555, "n": 18, "median_z": -0.41495492468063744}, "1.0": {"recovered": 0.2777777777777778, "n": 18, "median_z": 0.421350516964668}, "2.0": {"recovered": 0.2222222222222222, "n": 18, "median_z": -0.18066069708653762}, "4.0": {"recovered": 0.2222222222222222, "n": 18, "median_z": 0.8293226655209252}}, "ck1.npy": {"false_positive_rate": 0.0, "0.5": {"recovered": 0.1111111111111111, "n": 18, "median_z": 0.23280211901131675}, "1.0": {"recovered": 0.16666666666666666, "n": 18, "median_z": 0.6424039808363089}, "2.0": {"recovered": 0.16666666666666666, "n": 18, "median_z": 0.6383251816961883}, "4.0": {"recovered": 0.05555555555555555, "n": 18, "median_z": -0.09011424451958885}}, "ck1_reverse.npy": {"false_positive_rate": 0.0, "0.5": {"recovered": 0.2777777777777778, "n": 18, "median_z": -0.050791021685337306}, "1.0": {"recovered": 0.3333333333333333, "n": 18, "median_z": 0.5689225772077973}, "2.0": {"recovered": 0.4444444444444444, "n": 18, "median_z": 1.2710764715571332}, "4.0": {"recovered": 0.7777777777777778, "n": 18, "median_z": 2.412345789818562}}, "mean of all": {"false_positive_rate": 0.0, "0.5": {"recovered": 0.2777777777777778, "n": 18, "median_z": 0.182659269790936}, "1.0": {"recovered": 0.3333333333333333, "n": 18, "median_z": 0.8214940893876845}, "2.0": {"recovered": 0.3888888888888889, "n": 18, "median_z": 0.6584825033152197}, "4.0": {"recovered": 0.5, "n": 18, "median_z": 1.1699439852010327}}}

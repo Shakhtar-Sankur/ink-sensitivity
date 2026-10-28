@@ -42,15 +42,31 @@ segment w045 at 9.362 µm, the official model's map correlates with the publishe
 **0.068** for the same map shifted (the null). It sees real ink at the unread scrolls' resolution. This r is a lower bound:
 the reference is a downsampled JPEG, the two resolutions come from separate meshes, and both depth directions are averaged.
 
-**Stage 1, injection-recovery**: running. Recovery fractions per strength for PHerc. 139 and PHerc. 800 will be added
-here with the raw outputs.
+**Stage 1, brightness injection** ([raw scores and output](results/stage1_kaggle_2026-10-28/), Kaggle Tesla T4,
+28 Oct 2026, 18 volumes, 47.7 min of inference): **a brightness profile alone is not ink to the model.** On PHerc. 139,
+the model's map rises by **0.11** on the real text, but by only **0.01–0.05** on planted letters, even at **4×** the
+measured brightness. Pooled over all four model runs, at most 4 of 6 letters on PHerc. 139 and 9 of 18 on PHerc. 800
+cleared the threshold at 4×. The ink the model detects must carry more than a mean shift: its texture across layers
+and within strokes. Two caveats from the run itself: Kaggle's container had no font with Greek capitals, so every
+"letter" was drawn as a ring of comparable stroke area (now an error, not a fallback), and each volume had only 5–8
+empty control slots, so the 95% threshold is the maximum of a few values and the false-positive rate reads 0.
+
+**Stage 2, real ink transplanted** (`notebooks/stage2_transplant.ipynb`, `inject.py make --mode transplant`): since
+synthetic brightness is not ink, move real ink. From 2.2 mm windows of PHerc. 139's text, the voxel columns under the
+labelled ink are written into the target's papyrus through the ink's own stroke shapes, matched layer by layer to the
+target's brightness and spread. The control writes bare PHerc. 139 papyrus through the same shapes, so ink and control
+differ only in the ink; a fifth of the windows stay untouched. On PHerc. 139 the same text is also scored in place.
+Checked before inference: transplanted strokes are **+0.14 to +0.23 sd** brighter than their window, bare controls about
+0, which is the signature carried across intact. Scores: recovery above the bare controls' 95th percentile and the AUC
+of ink against bare, with confidence intervals that resample whole volumes.
 
 ## Reproduce
 
 Everything streams from the [open data](https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/index.html);
 nothing is downloaded whole.
 
-- `notebooks/stage0_baseline.ipynb` and `notebooks/stage1_injection.ipynb` run on a free Kaggle GPU (T4, Internet on).
+- `notebooks/stage0_baseline.ipynb`, `stage1_injection.ipynb` and `stage2_transplant.ipynb` run on a free Kaggle GPU
+  (T4, Internet on).
   They install the official inference code from
   [ScrollPrize/villa](https://github.com/ScrollPrize/villa) (branch `merge-ink-pipelines`) with `uv`.
 - `inject.py` holds the method and runs anywhere with NumPy, zarr 2, fsspec and Pillow:
@@ -58,7 +74,7 @@ nothing is downloaded whole.
 ```bash
 pip install -r requirements.txt
 python inject.py signature --out sig.json
-python inject.py make --sig sig.json --target 0800-3 --out inj/0800-3 --seed 0
+python inject.py make --sig sig.json --target 0800-3 --out inj/0800-3 --seed 0 --mode transplant
 # ... run the ink model on inj/0800-3/volume.zarr, save its maps as inj/0800-3/ck*.npy ...
 python inject.py score --dir inj/0800-3 --pred inj/0800-3/ck*.npy
 python inject.py aggregate --dirs inj/0800-* --label "PHerc. 800" --out agg.json
@@ -67,8 +83,10 @@ python -m pytest -q tests        # offline tests on synthetic data
 
 ## Limits
 
-- The injected signal is the measured mean brightness profile of ink. Real ink also changes texture. Stage 1 tests the
-  injection itself on PHerc. 139: letters planted at 1× should score like the real text next to them.
+- Stage 1's injected signal is the measured mean brightness profile of ink, and it failed its own calibration: letters
+  planted at 1× on PHerc. 139 score far below the real text next to them. Stage 2 transplants real ink instead.
+- Stage 2's ink comes from one scroll, through 16 windows of its text (7 bare windows for the control), reused across
+  placements. It asks whether PHerc. 139's ink would be seen on another scroll's papyrus, not what ink that scroll has.
 - The signature is measured on one segment of one scroll. Ink chemistry may differ between scrolls, so a recovery curve
   says what the model *could* see on a scroll, not what ink that scroll carries.
 - The labels are the published 2.4 µm predictions, registered by scaling, not hand-traced letters.

@@ -80,3 +80,61 @@ def test_score_and_aggregate_recover_strong_letters(tmp_path):
     rec = [agg[str(a)]["recovered"] for a in I.STRENGTHS]
     assert rec[-1] >= 0.9  # strength 4 is far above the noise
     assert rec[-1] >= rec[0]
+
+
+def test_donor_windows_split_text_from_bare():
+    ref = np.zeros((400, 400), np.float32)
+    ref[20:120, 20:120] = 0.2  # a text-like block, a fifth of it labelled ink
+    ref[40:60, 30:110] = 1.0
+    pap = np.ones_like(ref, bool)
+    text, bare = I.donor_windows(ref, pap, 0.9, 100)
+    assert (20, 20) in text or any(abs(y - 20) <= 50 and abs(x - 20) <= 50 for y, x in text)
+    assert bare and all(ref[y:y + 100, x:x + 100].max() < 0.9 for y, x in bare)
+    for a in text:  # windows do not overlap
+        for b in text:
+            assert a == b or abs(a[0] - b[0]) >= 100 or abs(a[1] - b[1]) >= 100
+
+
+def test_transplant_matches_target_statistics_under_the_mask_only():
+    rng = np.random.default_rng(0)
+    out = (100 + 10 * rng.standard_normal((5, 60, 60))).astype(np.float32)
+    before = out.copy()
+    donor = (50 + 2 * rng.standard_normal((3, 20, 20))).astype(np.float32)
+    mask = np.zeros((20, 20), bool)
+    mask[5:15, 5:15] = True
+    I.transplant(out, donor, mask, 10, 10, 1, np.full(5, 100.0), np.full(5, 10.0), np.full(3, 50.0), np.full(3, 2.0))
+    np.testing.assert_allclose(out[1:4, 15:25, 15:25], 100 + (donor[:, 5:15, 5:15] - 50) * 5, rtol=1e-5)
+    changed = out != before
+    assert not changed[0].any() and not changed[4].any()  # layers outside the donor's depth
+    assert changed[1].sum() == mask.sum()
+
+
+def test_transplant_scoring_separates_ink_from_bare(tmp_path):
+    rng = np.random.default_rng(3)
+    dirs = []
+    for v in range(4):
+        d = tmp_path / f"t{v}"
+        d.mkdir()
+        size, H = 40, 400
+        pred = (0.2 + 0.02 * rng.standard_normal((H, H))).astype(np.float32)
+        entries = []
+        for i in range(30):
+            y, x = 50 + (i // 6) * 60, 20 + (i % 6) * 60
+            m = np.zeros((size, size), bool)
+            m[10:30, 15:25] = True
+            kind = ("ink", "bare", "empty")[i % 3]
+            if kind == "ink":
+                pred[y:y + size, x:x + size][m] += 0.1
+            np.save(d / f"mask_{i:03d}.npy", m)
+            entries.append({"kind": kind, "y": y, "x": x, "mask": i})
+        meta = {"mode": "transplant", "target": "synthetic", "shape": [21, H, H], "window_px": size, "entries": entries}
+        json.dump(meta, open(d / "letters.json", "w"))
+        np.save(d / "ck0.npy", np.clip(pred * 255, 0, 255).astype(np.uint8))
+        I.score(Namespace(dir=str(d), pred=[str(d / "ck0.npy")]))
+        dirs.append(str(d))
+    out = tmp_path / "agg.json"
+    I.aggregate(Namespace(dirs=dirs, label="synthetic", out=str(out)))
+    agg = json.load(open(out))["mean of all"]
+    assert agg["recovered"] >= 0.9 and agg["auc_ink_vs_bare"] >= 0.95
+    assert agg["empty_above_threshold"] <= 0.2
+    assert agg["auc_ink_vs_bare_ci95"][0] <= agg["auc_ink_vs_bare"] <= agg["auc_ink_vs_bare_ci95"][1]
