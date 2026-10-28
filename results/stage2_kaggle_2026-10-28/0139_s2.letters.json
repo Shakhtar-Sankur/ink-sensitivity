@@ -1,0 +1,970 @@
+{
+  "mode": "transplant",
+  "target": "0139",
+  "source_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/segments/20260126000000-w045_2026012619/surface-volumes/9.362um-1.2m-113keV-volume-20250728140407.zarr",
+  "crop_yx": [
+    0,
+    2560
+  ],
+  "shape": [
+    28,
+    4096,
+    4096
+  ],
+  "voxel_um": 9.362,
+  "window_px": 235,
+  "donor_window_px": 235,
+  "donor_windows": {
+    "text": 16,
+    "bare": 7
+  },
+  "entries": [
+    {
+      "kind": "ink",
+      "y": 2820,
+      "x": 3290,
+      "mask": 0,
+      "shape_from": [
+        117,
+        936
+      ],
+      "donor": [
+        117,
+        936
+      ],
+      "ink_fraction": 0.21761883205070168
+    },
+    {
+      "kind": "bare",
+      "y": 1880,
+      "x": 470,
+      "mask": 1,
+      "shape_from": [
+        1170,
+        1521
+      ],
+      "donor": [
+        0,
+        585
+      ],
+      "ink_fraction": 0.10549569941149842
+    },
+    {
+      "kind": "ink",
+      "y": 940,
+      "x": 3525,
+      "mask": 2,
+      "shape_from": [
+        702,
+        936
+      ],
+      "donor": [
+        702,
+        936
+      ],
+      "ink_fraction": 0.2735355364418289
+    },
+    {
+      "kind": "bare",
+      "y": 1645,
+      "x": 3290,
+      "mask": 3,
+      "shape_from": [
+        702,
+        1755
+      ],
+      "donor": [
+        468,
+        1521
+      ],
+      "ink_fraction": 0.0888909008601177
+    },
+    {
+      "kind": "ink",
+      "y": 1645,
+      "x": 2820,
+      "mask": 4,
+      "shape_from": [
+        702,
+        1404
+      ],
+      "donor": [
+        702,
+        1404
+      ],
+      "ink_fraction": 0.1993662290629244
+    },
+    {
+      "kind": "bare",
+      "y": 2585,
+      "x": 3290,
+      "mask": 5,
+      "shape_from": [
+        1755,
+        1170
+      ],
+      "donor": [
+        1053,
+        351
+      ],
+      "ink_fraction": 0.08682661837935718
+    },
+    {
+      "kind": "ink",
+      "y": 705,
+      "x": 705,
+      "mask": 6,
+      "shape_from": [
+        117,
+        1755
+      ],
+      "donor": [
+        117,
+        1755
+      ],
+      "ink_fraction": 0.06270710728836577
+    },
+    {
+      "kind": "bare",
+      "y": 3525,
+      "x": 0,
+      "mask": 7,
+      "shape_from": [
+        1755,
+        819
+      ],
+      "donor": [
+        936,
+        702
+      ],
+      "ink_fraction": 0.13568130375735626
+    },
+    {
+      "kind": "ink",
+      "y": 3290,
+      "x": 3290,
+      "mask": 8,
+      "shape_from": [
+        234,
+        585
+      ],
+      "donor": [
+        234,
+        585
+      ],
+      "ink_fraction": 0.19610683567224987
+    },
+    {
+      "kind": "bare",
+      "y": 2115,
+      "x": 3760,
+      "mask": 9,
+      "shape_from": [
+        1755,
+        0
+      ],
+      "donor": [
+        0,
+        0
+      ],
+      "ink_fraction": 0.06484382073336352
+    },
+    {
+      "kind": "ink",
+      "y": 3290,
+      "x": 2115,
+      "mask": 10,
+      "shape_from": [
+        1287,
+        117
+      ],
+      "donor": [
+        1287,
+        117
+      ],
+      "ink_fraction": 0.18192847442281576
+    },
+    {
+      "kind": "bare",
+      "y": 3525,
+      "x": 235,
+      "mask": 11,
+      "shape_from": [
+        117,
+        1404
+      ],
+      "donor": [
+        936,
+        0
+      ],
+      "ink_fraction": 0.27963784517881396
+    },
+    {
+      "kind": "ink",
+      "y": 3055,
+      "x": 3290,
+      "mask": 12,
+      "shape_from": [
+        1287,
+        1170
+      ],
+      "donor": [
+        1287,
+        1170
+      ],
+      "ink_fraction": 0.1821095518334088
+    },
+    {
+      "kind": "bare",
+      "y": 2585,
+      "x": 3525,
+      "mask": 13,
+      "shape_from": [
+        234,
+        234
+      ],
+      "donor": [
+        468,
+        0
+      ],
+      "ink_fraction": 0.16123132639203258
+    },
+    {
+      "kind": "ink",
+      "y": 3055,
+      "x": 3525,
+      "mask": 14,
+      "shape_from": [
+        702,
+        585
+      ],
+      "donor": [
+        702,
+        585
+      ],
+      "ink_fraction": 0.14422815753734722
+    },
+    {
+      "kind": "bare",
+      "y": 3525,
+      "x": 2115,
+      "mask": 15,
+      "shape_from": [
+        1170,
+        819
+      ],
+      "donor": [
+        0,
+        585
+      ],
+      "ink_fraction": 0.20266183793571751
+    },
+    {
+      "kind": "ink",
+      "y": 1880,
+      "x": 235,
+      "mask": 16,
+      "shape_from": [
+        117,
+        936
+      ],
+      "donor": [
+        117,
+        936
+      ],
+      "ink_fraction": 0.21761883205070168
+    },
+    {
+      "kind": "bare",
+      "y": 470,
+      "x": 3525,
+      "mask": 17,
+      "shape_from": [
+        1170,
+        1521
+      ],
+      "donor": [
+        468,
+        1521
+      ],
+      "ink_fraction": 0.10549569941149842
+    },
+    {
+      "kind": "ink",
+      "y": 705,
+      "x": 3525,
+      "mask": 18,
+      "shape_from": [
+        702,
+        936
+      ],
+      "donor": [
+        702,
+        936
+      ],
+      "ink_fraction": 0.2735355364418289
+    },
+    {
+      "kind": "bare",
+      "y": 470,
+      "x": 3760,
+      "mask": 19,
+      "shape_from": [
+        702,
+        1755
+      ],
+      "donor": [
+        1053,
+        351
+      ],
+      "ink_fraction": 0.0888909008601177
+    },
+    {
+      "kind": "ink",
+      "y": 2820,
+      "x": 3525,
+      "mask": 20,
+      "shape_from": [
+        702,
+        1404
+      ],
+      "donor": [
+        702,
+        1404
+      ],
+      "ink_fraction": 0.1993662290629244
+    },
+    {
+      "kind": "bare",
+      "y": 1410,
+      "x": 940,
+      "mask": 21,
+      "shape_from": [
+        1755,
+        1170
+      ],
+      "donor": [
+        936,
+        702
+      ],
+      "ink_fraction": 0.08682661837935718
+    },
+    {
+      "kind": "ink",
+      "y": 2820,
+      "x": 3760,
+      "mask": 22,
+      "shape_from": [
+        117,
+        1755
+      ],
+      "donor": [
+        117,
+        1755
+      ],
+      "ink_fraction": 0.06270710728836577
+    },
+    {
+      "kind": "bare",
+      "y": 3055,
+      "x": 2585,
+      "mask": 23,
+      "shape_from": [
+        1755,
+        819
+      ],
+      "donor": [
+        0,
+        0
+      ],
+      "ink_fraction": 0.13568130375735626
+    },
+    {
+      "kind": "ink",
+      "y": 940,
+      "x": 705,
+      "mask": 24,
+      "shape_from": [
+        234,
+        585
+      ],
+      "donor": [
+        234,
+        585
+      ],
+      "ink_fraction": 0.19610683567224987
+    },
+    {
+      "kind": "bare",
+      "y": 3055,
+      "x": 3055,
+      "mask": 25,
+      "shape_from": [
+        1755,
+        0
+      ],
+      "donor": [
+        936,
+        0
+      ],
+      "ink_fraction": 0.06484382073336352
+    },
+    {
+      "kind": "ink",
+      "y": 470,
+      "x": 1645,
+      "mask": 26,
+      "shape_from": [
+        1287,
+        117
+      ],
+      "donor": [
+        1287,
+        117
+      ],
+      "ink_fraction": 0.18192847442281576
+    },
+    {
+      "kind": "bare",
+      "y": 940,
+      "x": 0,
+      "mask": 27,
+      "shape_from": [
+        117,
+        1404
+      ],
+      "donor": [
+        468,
+        0
+      ],
+      "ink_fraction": 0.27963784517881396
+    },
+    {
+      "kind": "ink",
+      "y": 1880,
+      "x": 0,
+      "mask": 28,
+      "shape_from": [
+        1287,
+        1170
+      ],
+      "donor": [
+        1287,
+        1170
+      ],
+      "ink_fraction": 0.1821095518334088
+    },
+    {
+      "kind": "bare",
+      "y": 940,
+      "x": 235,
+      "mask": 29,
+      "shape_from": [
+        234,
+        234
+      ],
+      "donor": [
+        0,
+        585
+      ],
+      "ink_fraction": 0.16123132639203258
+    },
+    {
+      "kind": "ink",
+      "y": 2115,
+      "x": 3525,
+      "mask": 30,
+      "shape_from": [
+        702,
+        585
+      ],
+      "donor": [
+        702,
+        585
+      ],
+      "ink_fraction": 0.14422815753734722
+    },
+    {
+      "kind": "bare",
+      "y": 470,
+      "x": 705,
+      "mask": 31,
+      "shape_from": [
+        1170,
+        819
+      ],
+      "donor": [
+        468,
+        1521
+      ],
+      "ink_fraction": 0.20266183793571751
+    },
+    {
+      "kind": "ink",
+      "y": 940,
+      "x": 3760,
+      "mask": 32,
+      "shape_from": [
+        117,
+        936
+      ],
+      "donor": [
+        117,
+        936
+      ],
+      "ink_fraction": 0.21761883205070168
+    },
+    {
+      "kind": "bare",
+      "y": 1410,
+      "x": 470,
+      "mask": 33,
+      "shape_from": [
+        1170,
+        1521
+      ],
+      "donor": [
+        1053,
+        351
+      ],
+      "ink_fraction": 0.10549569941149842
+    },
+    {
+      "kind": "ink",
+      "y": 3525,
+      "x": 1880,
+      "mask": 34,
+      "shape_from": [
+        702,
+        936
+      ],
+      "donor": [
+        702,
+        936
+      ],
+      "ink_fraction": 0.2735355364418289
+    },
+    {
+      "kind": "bare",
+      "y": 2585,
+      "x": 2115,
+      "mask": 35,
+      "shape_from": [
+        702,
+        1755
+      ],
+      "donor": [
+        936,
+        702
+      ],
+      "ink_fraction": 0.0888909008601177
+    },
+    {
+      "kind": "ink",
+      "y": 3525,
+      "x": 3525,
+      "mask": 36,
+      "shape_from": [
+        702,
+        1404
+      ],
+      "donor": [
+        702,
+        1404
+      ],
+      "ink_fraction": 0.1993662290629244
+    },
+    {
+      "kind": "bare",
+      "y": 940,
+      "x": 3290,
+      "mask": 37,
+      "shape_from": [
+        1755,
+        1170
+      ],
+      "donor": [
+        0,
+        0
+      ],
+      "ink_fraction": 0.08682661837935718
+    },
+    {
+      "kind": "ink",
+      "y": 1645,
+      "x": 3055,
+      "mask": 38,
+      "shape_from": [
+        117,
+        1755
+      ],
+      "donor": [
+        117,
+        1755
+      ],
+      "ink_fraction": 0.06270710728836577
+    },
+    {
+      "kind": "bare",
+      "y": 1410,
+      "x": 3525,
+      "mask": 39,
+      "shape_from": [
+        1755,
+        819
+      ],
+      "donor": [
+        936,
+        0
+      ],
+      "ink_fraction": 0.13568130375735626
+    },
+    {
+      "kind": "ink",
+      "y": 1645,
+      "x": 235,
+      "mask": 40,
+      "shape_from": [
+        234,
+        585
+      ],
+      "donor": [
+        234,
+        585
+      ],
+      "ink_fraction": 0.19610683567224987
+    },
+    {
+      "kind": "bare",
+      "y": 3525,
+      "x": 3760,
+      "mask": 41,
+      "shape_from": [
+        1755,
+        0
+      ],
+      "donor": [
+        468,
+        0
+      ],
+      "ink_fraction": 0.06484382073336352
+    },
+    {
+      "kind": "ink",
+      "y": 470,
+      "x": 1175,
+      "mask": 42,
+      "shape_from": [
+        1287,
+        117
+      ],
+      "donor": [
+        1287,
+        117
+      ],
+      "ink_fraction": 0.18192847442281576
+    },
+    {
+      "kind": "bare",
+      "y": 940,
+      "x": 470,
+      "mask": 43,
+      "shape_from": [
+        117,
+        1404
+      ],
+      "donor": [
+        0,
+        585
+      ],
+      "ink_fraction": 0.27963784517881396
+    },
+    {
+      "kind": "ink",
+      "y": 2115,
+      "x": 3290,
+      "mask": 44,
+      "shape_from": [
+        1287,
+        1170
+      ],
+      "donor": [
+        1287,
+        1170
+      ],
+      "ink_fraction": 0.1821095518334088
+    },
+    {
+      "kind": "bare",
+      "y": 3525,
+      "x": 470,
+      "mask": 45,
+      "shape_from": [
+        234,
+        234
+      ],
+      "donor": [
+        468,
+        1521
+      ],
+      "ink_fraction": 0.16123132639203258
+    },
+    {
+      "kind": "empty",
+      "y": 3525,
+      "x": 3290,
+      "mask": 46,
+      "shape_from": [
+        702,
+        585
+      ],
+      "donor": null,
+      "ink_fraction": 0.14422815753734722
+    },
+    {
+      "kind": "empty",
+      "y": 1410,
+      "x": 705,
+      "mask": 47,
+      "shape_from": [
+        1170,
+        819
+      ],
+      "donor": null,
+      "ink_fraction": 0.20266183793571751
+    },
+    {
+      "kind": "empty",
+      "y": 1410,
+      "x": 3290,
+      "mask": 48,
+      "shape_from": [
+        117,
+        936
+      ],
+      "donor": null,
+      "ink_fraction": 0.21761883205070168
+    },
+    {
+      "kind": "empty",
+      "y": 2585,
+      "x": 3760,
+      "mask": 49,
+      "shape_from": [
+        1170,
+        1521
+      ],
+      "donor": null,
+      "ink_fraction": 0.10549569941149842
+    },
+    {
+      "kind": "empty",
+      "y": 2350,
+      "x": 3760,
+      "mask": 50,
+      "shape_from": [
+        702,
+        936
+      ],
+      "donor": null,
+      "ink_fraction": 0.2735355364418289
+    },
+    {
+      "kind": "empty",
+      "y": 1645,
+      "x": 0,
+      "mask": 51,
+      "shape_from": [
+        702,
+        1755
+      ],
+      "donor": null,
+      "ink_fraction": 0.0888909008601177
+    },
+    {
+      "kind": "empty",
+      "y": 1880,
+      "x": 2820,
+      "mask": 52,
+      "shape_from": [
+        702,
+        1404
+      ],
+      "donor": null,
+      "ink_fraction": 0.1993662290629244
+    },
+    {
+      "kind": "empty",
+      "y": 1880,
+      "x": 3290,
+      "mask": 53,
+      "shape_from": [
+        1755,
+        1170
+      ],
+      "donor": null,
+      "ink_fraction": 0.08682661837935718
+    },
+    {
+      "kind": "empty",
+      "y": 1880,
+      "x": 3055,
+      "mask": 54,
+      "shape_from": [
+        117,
+        1755
+      ],
+      "donor": null,
+      "ink_fraction": 0.06270710728836577
+    },
+    {
+      "kind": "empty",
+      "y": 2350,
+      "x": 3290,
+      "mask": 55,
+      "shape_from": [
+        1755,
+        819
+      ],
+      "donor": null,
+      "ink_fraction": 0.13568130375735626
+    },
+    {
+      "kind": "empty",
+      "y": 2350,
+      "x": 3525,
+      "mask": 56,
+      "shape_from": [
+        234,
+        585
+      ],
+      "donor": null,
+      "ink_fraction": 0.19610683567224987
+    },
+    {
+      "kind": "empty",
+      "y": 705,
+      "x": 3760,
+      "mask": 57,
+      "shape_from": [
+        1755,
+        0
+      ],
+      "donor": null,
+      "ink_fraction": 0.06484382073336352
+    },
+    {
+      "kind": "real",
+      "y": 629,
+      "x": 2428,
+      "mask": 58,
+      "ink_fraction": 0.27963784517881396
+    },
+    {
+      "kind": "real",
+      "y": 1214,
+      "x": 1960,
+      "mask": 59,
+      "ink_fraction": 0.2735355364418289
+    },
+    {
+      "kind": "real",
+      "y": 629,
+      "x": 1960,
+      "mask": 60,
+      "ink_fraction": 0.21761883205070168
+    },
+    {
+      "kind": "real",
+      "y": 1682,
+      "x": 1843,
+      "mask": 61,
+      "ink_fraction": 0.20266183793571751
+    },
+    {
+      "kind": "real",
+      "y": 1214,
+      "x": 2428,
+      "mask": 62,
+      "ink_fraction": 0.1993662290629244
+    },
+    {
+      "kind": "real",
+      "y": 746,
+      "x": 1609,
+      "mask": 63,
+      "ink_fraction": 0.19610683567224987
+    },
+    {
+      "kind": "real",
+      "y": 1799,
+      "x": 2194,
+      "mask": 64,
+      "ink_fraction": 0.1821095518334088
+    },
+    {
+      "kind": "real",
+      "y": 1799,
+      "x": 1141,
+      "mask": 65,
+      "ink_fraction": 0.18192847442281576
+    },
+    {
+      "kind": "real",
+      "y": 746,
+      "x": 1258,
+      "mask": 66,
+      "ink_fraction": 0.16123132639203258
+    },
+    {
+      "kind": "real",
+      "y": 1214,
+      "x": 1609,
+      "mask": 67,
+      "ink_fraction": 0.14422815753734722
+    },
+    {
+      "kind": "real",
+      "y": 2267,
+      "x": 1843,
+      "mask": 68,
+      "ink_fraction": 0.13568130375735626
+    },
+    {
+      "kind": "real",
+      "y": 1682,
+      "x": 2545,
+      "mask": 69,
+      "ink_fraction": 0.10549569941149842
+    },
+    {
+      "kind": "real",
+      "y": 1214,
+      "x": 2779,
+      "mask": 70,
+      "ink_fraction": 0.0888909008601177
+    },
+    {
+      "kind": "real",
+      "y": 2267,
+      "x": 2194,
+      "mask": 71,
+      "ink_fraction": 0.08682661837935718
+    },
+    {
+      "kind": "real",
+      "y": 2267,
+      "x": 1024,
+      "mask": 72,
+      "ink_fraction": 0.06484382073336352
+    },
+    {
+      "kind": "real",
+      "y": 629,
+      "x": 2779,
+      "mask": 73,
+      "ink_fraction": 0.06270710728836577
+    }
+  ],
+  "papyrus_fraction": 0.9217763543128967
+}

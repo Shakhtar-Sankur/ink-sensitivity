@@ -51,14 +51,38 @@ and within strokes. Two caveats from the run itself: Kaggle's container had no f
 "letter" was drawn as a ring of comparable stroke area (now an error, not a fallback), and each volume had only 5–8
 empty control slots, so the 95% threshold is the maximum of a few values and the false-positive rate reads 0.
 
-**Stage 2, real ink transplanted** (`notebooks/stage2_transplant.ipynb`, `inject.py make --mode transplant`): since
-synthetic brightness is not ink, move real ink. From 2.2 mm windows of PHerc. 139's text, the voxel columns under the
-labelled ink are written into the target's papyrus through the ink's own stroke shapes, matched layer by layer to the
+**Stage 2, real ink transplanted** ([raw scores and output](results/stage2_kaggle_2026-10-28/), Kaggle Tesla T4,
+28 Oct 2026, 18 volumes, 49.2 min of inference; `notebooks/stage2_transplant.ipynb`, `inject.py make --mode transplant`).
+Since synthetic brightness is not ink, move real ink. From 2.2 mm windows of PHerc. 139's text, the voxel columns under
+the labelled ink are written into the target's papyrus through the ink's own stroke shapes, matched layer by layer to the
 target's brightness and spread. The control writes bare PHerc. 139 papyrus through the same shapes, so ink and control
-differ only in the ink; a fifth of the windows stay untouched. On PHerc. 139 the same text is also scored in place.
-Checked before inference: transplanted strokes are **+0.14 to +0.23 sd** brighter than their window, bare controls about
-0, which is the signature carried across intact. Scores: recovery above the bare controls' 95th percentile and the AUC
-of ink against bare, with confidence intervals that resample whole volumes.
+differ only in the ink; a fifth of the windows stay untouched. Before inference, transplanted strokes were **+0.14 to
++0.23 sd** brighter than their window and bare controls about 0: the signature carried across intact.
+
+**The official model sees real ink moved onto PHerc. 800, an eligible scroll, but only read in one depth direction.**
+
+| PHerc. 800, 5 segments × 3 placements | real-ink windows recovered (5% false positives) | AUC, ink vs bare |
+|---|---|---|
+| checkpoint seed43, forward | **79%** [52, 90] | **0.94** [0.91, 0.96] |
+| checkpoint seed42, forward | 61% [32, 69] | 0.88 [0.84, 0.91] |
+| checkpoint seed43, depth reversed | 26% [14, 33] | 0.74 [0.69, 0.78] |
+| checkpoint seed42, depth reversed | 15% [11, 20] | 0.59 [0.56, 0.63] |
+| mean of all four | 72% [56, 82] | 0.91 [0.88, 0.94] |
+
+168 real-ink and 168 bare windows; brackets are 95% intervals from resampling whole volumes. No untouched window cleared
+the threshold in any of these runs (0 of 87). The threshold is the 95th percentile of the bare controls, not of the
+untouched windows: moving papyrus at all raises the model's map slightly (bare median +0.02–0.06 against about 0 for
+untouched), so only the bare control isolates the ink.
+
+On PHerc. 139 itself, the calibration holds: transplanted ink scores like the same real text left in place (median
++0.109 against +0.101, mean of all four), and both forward checkpoints recover **69%** of that real text in place, while
+the depth-reversed runs recover **none** of it (0 of 48). Reading the volume in the reversed order is close to blind at
+9 µm on these segments, so averaging both directions, as the inference script's `--direction both` setting does,
+dilutes the signal: on PHerc. 139 the four-way mean recovers only 19% of real text in place, against 69% forward.
+
+What this means for the First Letters search on PHerc. 800: ink like PHerc. 139's, placed on PHerc. 800's own papyrus
+and scan, is found most of the time by the forward model, so a null from the forward model is informative about ink of
+this kind. It does not show that PHerc. 800's ink, if any, looks like PHerc. 139's.
 
 ## Reproduce
 
@@ -86,7 +110,10 @@ python -m pytest -q tests        # offline tests on synthetic data
 - Stage 1's injected signal is the measured mean brightness profile of ink, and it failed its own calibration: letters
   planted at 1× on PHerc. 139 score far below the real text next to them. Stage 2 transplants real ink instead.
 - Stage 2's ink comes from one scroll, through 16 windows of its text (7 bare windows for the control), reused across
-  placements. It asks whether PHerc. 139's ink would be seen on another scroll's papyrus, not what ink that scroll has.
+  placements, so the intervals understate the variety of real ink. It asks whether PHerc. 139's ink would be seen on
+  another scroll's papyrus, not what ink that scroll has.
+- The direction finding is measured on PHerc. 139 w045 and five auto-grown PHerc. 800 segments, whose surface normals
+  may all point the same way; which direction reads the ink is likely a property of each segment's orientation.
 - The signature is measured on one segment of one scroll. Ink chemistry may differ between scrolls, so a recovery curve
   says what the model *could* see on a scroll, not what ink that scroll carries.
 - The labels are the published 2.4 µm predictions, registered by scaling, not hand-traced letters.

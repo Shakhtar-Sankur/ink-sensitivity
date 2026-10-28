@@ -1,0 +1,53 @@
+0139: transplant windows of 235px (2.2 mm), {'ink': 23, 'bare': 23, 'empty': 12, 'real': 16}; donor windows 16 text / 7 bare; crop (28, 4096, 4096) at 0,2560; papyrus 0.92
+0800-0: transplant windows of 255px (2.2 mm), {'ink': 11, 'bare': 11, 'empty': 6, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2160, 2240) at 0,0; papyrus 0.47
+0800-1: transplant windows of 255px (2.2 mm), {'ink': 10, 'bare': 10, 'empty': 5, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2040, 2000) at 0,0; papyrus 0.52
+0800-2: transplant windows of 255px (2.2 mm), {'ink': 8, 'bare': 8, 'empty': 4, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2100, 2100) at 0,0; papyrus 0.46
+0800-3: transplant windows of 255px (2.2 mm), {'ink': 16, 'bare': 16, 'empty': 8, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2580, 2580) at 0,0; papyrus 0.47
+0800-4: transplant windows of 255px (2.2 mm), {'ink': 11, 'bare': 11, 'empty': 6, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2300, 2260) at 0,0; papyrus 0.47
+0139: transplant windows of 235px (2.2 mm), {'ink': 23, 'bare': 23, 'empty': 12, 'real': 16}; donor windows 16 text / 7 bare; crop (28, 4096, 4096) at 0,2560; papyrus 0.92
+0800-0: transplant windows of 255px (2.2 mm), {'ink': 11, 'bare': 11, 'empty': 6, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2160, 2240) at 0,0; papyrus 0.47
+0800-1: transplant windows of 255px (2.2 mm), {'ink': 10, 'bare': 10, 'empty': 5, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2040, 2000) at 0,0; papyrus 0.52
+0800-2: transplant windows of 255px (2.2 mm), {'ink': 8, 'bare': 8, 'empty': 4, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2100, 2100) at 0,0; papyrus 0.46
+0800-3: transplant windows of 255px (2.2 mm), {'ink': 16, 'bare': 16, 'empty': 8, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2580, 2580) at 0,0; papyrus 0.47
+0800-4: transplant windows of 255px (2.2 mm), {'ink': 11, 'bare': 11, 'empty': 6, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2300, 2260) at 0,0; papyrus 0.47
+0139: transplant windows of 235px (2.2 mm), {'ink': 23, 'bare': 23, 'empty': 12, 'real': 16}; donor windows 16 text / 7 bare; crop (28, 4096, 4096) at 0,2560; papyrus 0.92
+0800-0: transplant windows of 255px (2.2 mm), {'ink': 11, 'bare': 11, 'empty': 6, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2160, 2240) at 0,0; papyrus 0.47
+0800-1: transplant windows of 255px (2.2 mm), {'ink': 10, 'bare': 10, 'empty': 5, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2040, 2000) at 0,0; papyrus 0.52
+0800-2: transplant windows of 255px (2.2 mm), {'ink': 8, 'bare': 8, 'empty': 4, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2100, 2100) at 0,0; papyrus 0.46
+0800-3: transplant windows of 255px (2.2 mm), {'ink': 16, 'bare': 16, 'empty': 8, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2580, 2580) at 0,0; papyrus 0.47
+0800-4: transplant windows of 255px (2.2 mm), {'ink': 11, 'bare': 11, 'empty': 6, 'real': 0}; donor windows 16 text / 7 bare; crop (31, 2300, 2260) at 0,0; papyrus 0.47
+== 0139: ink n=23 median +0.109  bare n=23 median +0.015  empty n=12 median -0.014  real n=16 median +0.101 (371 s)
+== 0800-0: ink n=11 median +0.141  bare n=11 median +0.040  empty n=6 median -0.023 (236 s)
+== 0800-1: ink n=10 median +0.143  bare n=10 median +0.026  empty n=5 median -0.012 (192 s)
+== 0800-2: ink n=8 median +0.113  bare n=8 median +0.042  empty n=4 median -0.011 (150 s)
+== 0800-3: ink n=16 median +0.140  bare n=16 median +0.034  empty n=8 median -0.002 (143 s)
+== 0800-4: ink n=11 median +0.124  bare n=11 median +0.045  empty n=6 median -0.013 (154 s)
+== 0139: ink n=23 median +0.110  bare n=23 median +0.021  empty n=12 median +0.002  real n=16 median +0.101 (212 s)
+== 0800-0: ink n=11 median +0.138  bare n=11 median +0.033  empty n=6 median +0.001 (129 s)
+== 0800-1: ink n=10 median +0.125  bare n=10 median +0.024  empty n=5 median -0.001 (125 s)
+== 0800-2: ink n=8 median +0.126  bare n=8 median +0.025  empty n=4 median +0.008 (127 s)
+== 0800-3: ink n=16 median +0.156  bare n=16 median +0.044  empty n=8 median -0.019 (142 s)
+== 0800-4: ink n=11 median +0.119  bare n=11 median +0.038  empty n=6 median -0.014 (131 s)
+== 0139: ink n=23 median +0.094  bare n=23 median +0.046  empty n=12 median +0.003  real n=16 median +0.099 (208 s)
+== 0800-0: ink n=11 median +0.130  bare n=11 median +0.056  empty n=6 median -0.003 (123 s)
+== 0800-1: ink n=10 median +0.162  bare n=10 median +0.025  empty n=5 median -0.025 (120 s)
+== 0800-2: ink n=8 median +0.139  bare n=8 median +0.019  empty n=4 median +0.004 (123 s)
+== 0800-3: ink n=16 median +0.141  bare n=16 median +0.036  empty n=8 median -0.020 (137 s)
+== 0800-4: ink n=11 median +0.126  bare n=11 median +0.053  empty n=6 median -0.009 (129 s)
+all inference: 49.2 min
+18 of 18 volumes scored
+== PHerc. 139 (calibration): 3 volumes
+  ck0.npy                ink recovered 0.55 [0.35, 0.59]  AUC 0.83 [0.79, 0.85]  empty above thr 0.06  n ink/bare/empty 69/69/36  | real text in place: recovered 0.69 (n 48)
+  ck0_reverse.npy        ink recovered 0.01 [0.00, 0.09]  AUC 0.52 [0.48, 0.54]  empty above thr 0.08  n ink/bare/empty 69/69/36  | real text in place: recovered 0.00 (n 48)
+  ck1.npy                ink recovered 0.68 [0.30, 0.87]  AUC 0.92 [0.85, 0.96]  empty above thr 0.00  n ink/bare/empty 69/69/36  | real text in place: recovered 0.69 (n 48)
+  ck1_reverse.npy        ink recovered 0.03 [0.00, 0.26]  AUC 0.63 [0.59, 0.67]  empty above thr 0.00  n ink/bare/empty 69/69/36  | real text in place: recovered 0.00 (n 48)
+  mean of all            ink recovered 0.17 [0.00, 0.70]  AUC 0.84 [0.70, 0.91]  empty above thr 0.00  n ink/bare/empty 69/69/36  | real text in place: recovered 0.19 (n 48)
+== PHerc. 800 (eligible, unread): 15 volumes
+  ck0.npy                ink recovered 0.61 [0.32, 0.69]  AUC 0.88 [0.84, 0.91]  empty above thr 0.05  n ink/bare/empty 168/168/87
+  ck0_reverse.npy        ink recovered 0.15 [0.11, 0.20]  AUC 0.59 [0.56, 0.63]  empty above thr 0.00  n ink/bare/empty 168/168/87
+  ck1.npy                ink recovered 0.79 [0.52, 0.90]  AUC 0.94 [0.91, 0.96]  empty above thr 0.00  n ink/bare/empty 168/168/87
+  ck1_reverse.npy        ink recovered 0.26 [0.14, 0.33]  AUC 0.74 [0.69, 0.78]  empty above thr 0.00  n ink/bare/empty 168/168/87
+  mean of all            ink recovered 0.72 [0.56, 0.82]  AUC 0.91 [0.88, 0.94]  empty above thr 0.00  n ink/bare/empty 168/168/87
+=== STAGE 2 SUMMARY (copy this) ===
+GPU: Tesla T4
+signature: peak 0.226 sd; ink px 212496
