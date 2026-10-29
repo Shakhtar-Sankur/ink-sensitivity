@@ -61,6 +61,11 @@ differ only in the ink; a fifth of the windows stay untouched. Before inference,
 
 **The official model sees real ink moved onto PHerc. 800, an eligible scroll, but only read in one depth direction.**
 
+![The official model's ink map on PHerc. 800 segment 3, placement 0](results/stage2_kaggle_2026-10-28/pherc0800_transplant_example.png)
+
+*The official model's ink map (mean of both checkpoints and both depth directions) on PHerc. 800 segment 3. Red: real
+PHerc. 139 ink moved in. Blue: bare PHerc. 139 papyrus moved in through the same stroke shapes. Grey: untouched.*
+
 | PHerc. 800, 5 segments × 3 placements | real-ink windows recovered (5% false positives) | AUC, ink vs bare |
 |---|---|---|
 | checkpoint seed43, forward | **79%** [52, 90] | **0.94** [0.91, 0.96] |
